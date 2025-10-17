@@ -55,7 +55,7 @@ body.no-scroll{overflow:hidden}
 .hero-full{min-height:100vh;padding:0}
 .hero-backdrop{
   position:absolute; inset:0;
-  background-image:url("https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=2400&auto=format&fit=crop");
+  background-image:url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074");
   background-size:cover; background-position:center;
   z-index:-2;
 }
@@ -180,3 +180,4 @@ html { scroll-behavior: smooth; }
   background:#0c0c0c;            /* déjà présent, on le garde */
   color:#fff;
 }
+
