@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chourak Consulting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER (transparent au départ) -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand brand-logo" href="accueil" aria-label="Accueil">
+        <img id="brandLogo" src="assets/CHOURAK_blanc.png" alt="Chourak Consulting">
+      </a>
+
+      <!-- Bouton burger (mobile) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menu desktop -->
+      <nav class="menu" aria-label="Navigation principale">
+        <a href="#expertises">Expertises</a>
+        <a href="#references">Références</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <a class="btn-primary" href="#rdv">Prendre rendez vous</a>
+      </nav>
+
+      <!-- Menu mobile -->
+      <nav id="mobile-menu" class="mobile-menu" aria-label="Navigation mobile">
+        <a href="#expertises">Expertises</a>
+        <a href="#references">Références</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <a class="btn-primary" href="#rdv" data-scroll="bottom">Prendre rendez vous</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO plein écran : l'image est en background, le header passe au-dessus -->
+  <section class="hero hero-full">
+    <div class="hero-backdrop" role="img" aria-label="Illustration data & IA"></div>
+    <div class="container hero-content">
+      <h1>Accélérez vos<br/>projets Data & IA.</h1>
+      <p>Conseil opérationnel et experts Data pour délivrer vite et bien.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Parler à un expert</a>
+        <a class="btn-outline" href="#expertises">Découvrir nos expertises</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISES -->
+  <section id="expertises" class="section container">
+    <h2>Nos expertises</h2>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="eng" role="tab" aria-selected="true">Data Engineer</button>
+      <button class="tab" data-tab="analyst" role="tab" aria-selected="false">Data Analyst</button>
+      <button class="tab" data-tab="scientist" role="tab" aria-selected="false">Data Scientist</button>
+      <button class="tab" data-tab="ml" role="tab" aria-selected="false">IA Engineer</button>
+    </div>
+
+    <!-- Data Engineer -->
+    <div class="expertise-card" id="tab-eng" role="tabpanel">
+      <h3>Data Engineer</h3>
+      <ul class="expertise-list">
+        <li>Concevoir et maintenir les pipelines de données (ETL/ELT)</li>
+        <li>Mettre en place l’infrastructure data (Data Lake, Data Warehouse)</li>
+        <li>Optimiser la performance et la qualité des données</li>
+        <li>Automatiser les flux via des orchestrateurs</li>
+      </ul>
+      <h4>Clouds</h4>
+      <p>Azure (Data Factory, Synapse, SQL Database), AWS (Glue, Redshift), GCP (BigQuery)</p>
+      <h4>Outils</h4>
+      <p>Databricks, Snowflake, Airflow, DBT — Langages : Python, SQL, Spark</p>
+    </div>
+
+    <!-- Data Analyst -->
+    <div class="expertise-card" id="tab-analyst" role="tabpanel" hidden>
+      <h3>Data Analyst</h3>
+      <ul class="expertise-list">
+        <li>Analyser les données pour en extraire des insights métier</li>
+        <li>Créer des tableaux de bord et indicateurs clés (KPI)</li>
+        <li>Modéliser les données pour la visualisation</li>
+        <li>Collaborer avec les équipes métier pour la prise de décision</li>
+      </ul>
+      <h4>Clouds</h4>
+      <p>Azure, AWS, GCP (pour les sources de données)</p>
+      <h4>Langages</h4>
+      <p>SQL, DAX, parfois Python</p>
+    </div>
+
+    <!-- Data Scientist -->
+    <div class="expertise-card" id="tab-scientist" role="tabpanel" hidden>
+      <h3>Data Scientist</h3>
+      <ul class="expertise-list">
+        <li>Construire des modèles prédictifs et statistiques</li>
+        <li>Nettoyer, explorer et préparer les datasets</li>
+        <li>Déployer des modèles de Machine Learning en production</li>
+        <li>Interpréter et communiquer les résultats</li>
+      </ul>
+      <h4>Clouds</h4>
+      <p>Azure ML, AWS Sagemaker, GCP Vertex AI</p>
+      <h4>Outils</h4>
+      <p>Databricks, Jupyter, MLflow, Snowflake</p>
+      <h4>Langages</h4>
+      <p>Python (scikit-learn, pandas, TensorFlow, PyTorch), SQL</p>
+    </div>
+
+    <!-- IA Engineer -->
+    <div class="expertise-card" id="tab-ml" role="tabpanel" hidden>
+      <h3>IA Engineer</h3>
+      <ul class="expertise-list">
+        <li>Développer des solutions IA Générative</li>
+        <li>Concevoir et déployer des assistants IA répondant aux besoins métiers</li>
+        <li>LLM, RAG, intégration de modèles</li>
+        <li>Industrialiser les modèles d’IA / ML</li>
+        <li>Mettre en place des pipelines de training et déploiement (MLOps)</li>
+        <li>Gérer la scalabilité et la performance des modèles</li>
+        <li>Intégrer les modèles dans les applications métiers</li>
+      </ul>
+      <h4>Clouds</h4>
+      <p>Azure ML, AWS Sagemaker, GCP Vertex AI</p>
+      <h4>Outils</h4>
+      <p>Databricks, MLflow, Airflow, Docker, Kubernetes, Copilot Studio, AI Foundry</p>
+      <h4>Langages</h4>
+      <p>Python, SQL, parfois Java/Scala</p>
+    </div>
+  </section>
+
+  <!-- RÉFÉRENCES -->
+  <section id="references" class="refs-wrapper">
+    <div class="container">
+      <h2>Entreprises avec qui nous avons travaillé</h2>
+
+      <div class="logo-ticker" aria-label="logos défilants">
+        <div class="logo-track">
+          <div class="logo-group">
+            <div class="logo-item" data-name="Air Liquide"><div class="logo-card"><img src="assets/air-liquide.jpg" alt="Air Liquide"></div></div>
+            <div class="logo-item" data-name="Vidal France"><div class="logo-card"><img src="assets/vidal-france.jpg" alt="Vidal France"></div></div>
+            <div class="logo-item" data-name="Numberly"><div class="logo-card"><img src="assets/numberly.jpg" alt="Numberly"></div></div>
+            <div class="logo-item" data-name="Natran Groupe"><div class="logo-card"><img src="assets/natran-groupe.jpg" alt="Natran Groupe"></div></div>
+            <div class="logo-item" data-name="Believe"><div class="logo-card"><img src="assets/believe.jpg" alt="Believe"></div></div>
+            <div class="logo-item" data-name="Vinci Facilities"><div class="logo-card"><img src="assets/vinci-facilities.jpg" alt="Vinci Facilities"></div></div>
+            <div class="logo-item" data-name="Jules"><div class="logo-card"><img src="assets/jules.jpg" alt="Jules"></div></div>
+            <br><br>
+          </div>
+          <div class="logo-group" aria-hidden="true">
+            <div class="logo-item" data-name="Air Liquide"><div class="logo-card"><img src="assets/air-liquide.jpg" alt="Air Liquide"></div></div>
+            <div class="logo-item" data-name="Vidal France"><div class="logo-card"><img src="assets/vidal-france.jpg" alt="Vidal France"></div></div>
+            <div class="logo-item" data-name="Numberly"><div class="logo-card"><img src="assets/numberly.jpg" alt="Numberly"></div></div>
+            <div class="logo-item" data-name="Natran Groupe"><div class="logo-card"><img src="assets/natran-groupe.jpg" alt="Natran Groupe"></div></div>
+            <div class="logo-item" data-name="Believe"><div class="logo-card"><img src="assets/believe.jpg" alt="Believe"></div></div>
+            <div class="logo-item" data-name="Vinci Facilities"><div class="logo-card"><img src="assets/vinci-facilities.jpg" alt="Vinci Facilities"></div></div>
+            <div class="logo-item" data-name="Jules"><div class="logo-card"><img src="assets/jules.jpg" alt="Jules"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos" class="section about">
+    <div class="container about-grid">
+      <div>
+        <h2>À propos de nous</h2>
+        <p>CHOURAK CONSULTING est un cabinet spécialisé dans le recrutement et le placement de freelances Data & IA. 
+        <br><br>
+        Forts de plus de 10 ans d’expérience dans le domaine, nous avons développé une expertise pointue des enjeux et besoins des entreprises, acquise à travers des projets variés et exigeants. 
+        <br><br>
+        Nous nous distinguons par notre capacité à identifier et connecter rapidement les meilleurs experts data du marché avec les entreprises ayant des besoins spécifiques.
+        <br><br>
+        Notre mission est simple : vous accompagner avec réactivité et expertise en mettant à votre service un réseau de freelances qualifiés, sélectionnés pour leur excellence et leur capacité à apporter de la valeur à vos projets.</p>
+        <div class="stats">
+          <div class="stat"><div style="font-size:40px; font-weight:800">+ 10 ans</div><div>D'expérience dans la data</div></div>
+          <div class="stat"><div style="font-size:40px; font-weight:800">98%</div><div>Satisfaction client</div></div>
+          <div class="stat"><div style="font-size:40px; font-weight:800">+50</div><div>Projets livrés</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="top">
+          <img class="avatar" src="assets/pp.jpg" alt="Fondateur – photo de profil">
+
+          <div>
+            <div style="font-weight:700;">Fondateur</div>
+            <div class="chip-list">Expert Data & IA avec +10 ans d'expérience</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div style="margin-bottom:18px;">
+            <div style="font-weight:700; margin-bottom:8px;">Expérience</div>
+            <div>+10 ans — Data Engineering & Architecture</div>
+            <div>+50 projets — Livrés avec succès</div>
+            <div>Secteurs variés — Finance, Retail, Santé, Industrie</div>
+            <div>Certifications — Azure, AWS, GCP, Databricks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form class="form" action="contact.php" method="POST" novalidate>
+          <input type="text" name="hp_field" autocomplete="off" tabindex="-1"
+                 style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true" />
+          <label for="fullname">Nom</label>
+          <input id="fullname" name="fullname" type="text" required maxlength="120" />
+          <label for="email">Email professionnel</label>
+          <input id="email" name="email" type="email" required maxlength="160" />
+          <label for="company">Entreprise</label>
+          <input id="company" name="company" type="text" maxlength="160" />
+          <label for="subject">Sujet</label>
+          <input id="subject" name="subject" type="text" maxlength="160" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required maxlength="4000"></textarea>
+          <div style="margin-top:16px;"><button class="btn-primary" type="submit">Envoyer</button></div>
+          <div class="notes">Réponse sous 24h • RGPD : voir <a href="politique-confidentialite">Politique de confidentialité</a></div>
+        </form>
+        <aside class="appt" id="rdv">
+          <h3>Prendre rendez-vous</h3>
+          <p>Réservez un créneau de 30 minutes pour discuter de votre projet Data & IA.</p>
+          <a class="btn-primary" href="https://calendly.com/">Prendre rendez-vous 30 min</a>
+          <p class="notes">Un lien de visioconférence vous sera envoyé par email après réservation.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-size:26px; font-weight:800;">Chourak Consulting</div>
+        <div style="margin-top:12px; color:#333;">contact@chourak-consulting.com</div>
+      </div>
+      <div>
+        <div style="font-size:22px; font-weight:800;">Réseaux sociaux</div>
+        <div class="socials" style="margin-top:12px;">
+          <a href="https://www.linkedin.com/in/mohamed-chourak-19a84a89/" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:22px; font-weight:800;">Informations légales</div>
+        <div class="legal-links" style="margin-top:12px; display:grid; gap:8px;">
+          <a href="mentions-legales">Mentions légales</a>
+          <a href="politique-confidentialite">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© 2025 Chourak Consulting</span>
+      <span>Site développé par <strong><a href="https://janjawish.fr" target="_blank" rel="noopener">Jan Jawish</a></strong></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

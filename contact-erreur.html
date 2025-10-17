@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erreur d’envoi — Chourak Consulting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .feedback { padding: 72px 0; }
+    .card-error {
+      border: 1px solid var(--border);
+      background: #fff3f3;
+      padding: 32px;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .card-error h1 { margin-top: 0; font-size: 40px; }
+    .card-error p { color:#444; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand brand-logo" href="accueil" aria-label="Accueil">
+        <img src="assets/CHOURAK.png" alt="Chourak Consulting">
+      </a>
+      <nav class="menu">
+        <a href="accueil#expertises">Expertises</a>
+        <a href="accueil#references">Références</a>
+        <a href="accueil#apropos">À propos</a>
+        <a href="accueil#contact">Contact</a>
+        <a class="btn-primary" href="accueil#rdv">Prendre rendez vous</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="feedback">
+    <div class="container">
+      <div class="card-error">
+        <h1>Oups… une erreur est survenue ❌</h1>
+        <p>Réessayez plus tard, ou contactez-nous sur
+          <strong>contact@chourak-consulting.com</strong>.
+        </p>
+        <div style="margin-top:24px;">
+          <a href="accueil#contact" class="btn-primary">Revenir au formulaire</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
