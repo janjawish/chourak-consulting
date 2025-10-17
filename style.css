@@ -163,3 +163,20 @@ footer a{color:#222;text-decoration:none}
 .tab,.menu a,.mobile-menu a,.btn-primary,.btn-outline,.nav-toggle{outline-offset:2px}
 .tab:focus-visible,.menu a:focus-visible,.mobile-menu a:focus-visible,.btn-primary:focus-visible,.btn-outline:focus-visible,.nav-toggle:focus-visible{outline:2px solid}
 html { scroll-behavior: smooth; }
+/* Fix mobile: neutraliser le bleu sur les onglets */
+.tab{
+  color:#111;                    /* couleur texte par défaut */
+  -webkit-appearance:none;       /* iOS */
+  -moz-appearance:none;
+  appearance:none;
+  -webkit-tap-highlight-color: transparent; /* supprime le flash bleu */
+}
+.tab:focus,
+.tab:active,
+.tab:visited{
+  color:#111;                    /* force la même couleur à l'appui/focus */
+}
+.tab.active{
+  background:#0c0c0c;            /* déjà présent, on le garde */
+  color:#fff;
+}
